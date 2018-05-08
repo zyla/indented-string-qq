@@ -1,0 +1,27 @@
+name:                indented-string-qq
+version:             0.1.0.0
+synopsis:            A string quasiquoter that removes unnecessary indentation.
+homepage:            https://github.com/zyla/indented-string-qq
+license:             BSD3
+author:              Maciej bielecki
+maintainer:          maciej.bielecki@prati.pl
+copyright:           2018 Maciej Bielecki
+category:            Text
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - template-haskell >= 2.5
+
+library:
+  source-dirs:      src
+  exposed-modules:  Text.IndentedString.QQ
+
+tests:
+  tests:
+    source-dirs: test
+    main: Spec.hs
+    dependencies:
+      - indented-string-qq
+      - hspec
